@@ -1,15 +1,19 @@
 openapi: 3.0.0
 
 info:
-  title: primality-test-swagger-example
+  title: ocr
   version: 0.0.1
 
 servers:
-  - url: https://endpoint.ainize.ai/kiyeopyang/webapp/
+  - url: https://endpoint.ainize.ai/kiyeopyang/ocr/
 
 paths:
   /:
     get:
+      parameters: # Set parameter values here
+        - name: url # Set parameter name
+          in: query # Select amongst query, header, path, and cookie
+          required: true
       responses:
         "200":
           content:
